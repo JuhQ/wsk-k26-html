@@ -35,5 +35,21 @@
       <button type="submit">Lähetä</button>
       <button type="reset">Tyhjennä</button>
     </form>
+
+    <script>
+      const button = document.querySelector("button");
+
+      //document.querySelector("button").addEventListener("click", (event) => {
+
+      const handleClick = (event) => {
+        event.preventDefault();
+        console.log("event", event);
+
+        // poistetaan tapahtumakuuntelija
+        // button.removeEventListener("click", handleClick);
+      };
+
+      button.addEventListener("click", handleClick);
+    </script>
   </body>
 </html>
